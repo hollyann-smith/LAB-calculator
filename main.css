@@ -1,38 +1,33 @@
 body {
   background-color: white;
-  height: 300px;
-  width: 100px;
   font-family: monospace;
 }
 
 .container {
   background: lightGrey;
-  width: max-content;
-  margin: auto;
+  width: 400px;
 }
 
-.display{
-  width: 100%;
+.display {
   background-color: black;
   color: white;
-  height: 65px;
-  font-size: 48px;
+  font-size: 35px;
   display: flex;
+  flex-basis: 100%; 
   justify-content: flex-end;
-
+  align-items: center;
+  padding: 20px;
 }
 
-.buttons{
-  max-width: 300px;
+.squares {
   display:flex;
   flex-wrap: wrap;
-
 }
 
-button{
-  flex: 1 25%;
-  padding: 15px;
-  font-size: 26px;
+button {
+  flex-basis: 25%;
+  padding: 25px;
+  font-size: 25px;
   border: 1px solid black;
 } 
 
@@ -40,22 +35,33 @@ button{
   background-color:#d8d9db;
 }
 
-.btn-operator {
-  background-color:#df974c;
-  color: white;
-}
-
-.btn-equals {
+.btn-symbol, .btn-equals {
   background-color:#df974c;
   color: white;
 }
 
 .btn-clear {
    background-color:#d8d9db;
-   flex: 1 50%;
+   flex-basis: 50%;
 }
 
 .btn-zero {
   background-color:#d8d9db;
-  flex: 1 75%;
+  flex-basis: 75%;
+}
+
+.btn-number:hover, .btn-zero:hover, .btn-clear:hover {
+  background-color:#ebebeb;
+}
+
+.btn-symbol:hover, .btn-equals:hover  {
+  background-color:#dfb07e;
+}
+
+.btn-number:active, .btn-clear:active, .btn-zero:active {
+  background-color:#bbbcbe;
+}
+
+.btn-symbol:active, .btn-equals:active {
+  background-color: #dd8d37;
 }
